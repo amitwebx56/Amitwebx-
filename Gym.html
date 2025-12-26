@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desi Gym – Amit WebX Portfolio</title>
+<style>
+body{
+ margin:0;
+ font-family:Arial;
+ background:#0b1220;
+ color:white;
+}
+header{
+ background:#0f1a33;
+ padding:15px 40px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ position:sticky;
+ top:0;
+ z-index:1000;
+ border-bottom:2px solid #2b4cff;
+}
+header h2 span{color:#2b4cff;}
+nav a{margin:0 12px;text-decoration:none;color:white;font-weight:bold;font-size:14px;}
+.hero{
+ background:url('https://images.unsplash.com/photo-1558611848-73f7eb4001ab') center/cover no-repeat;
+ padding:120px 20px;
+ text-align:center;
+}
+.hero h1{font-size:38px;color:#2b4cff;margin-bottom:10px;}
+.hero p{font-size:16px;margin-bottom:20px;}
+button{
+ background:#2b4cff;
+ border:none;
+ padding:12px 22px;
+ color:white;
+ border-radius:25px;
+ cursor:pointer;
+}
+.section{
+ padding:50px 20px;
+ max-width:1000px;
+ margin:auto;
+ background:#101c38;
+ border-radius:14px;
+ margin-top:25px;
+ box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+.box{
+ background:#0f1a33;
+ padding:20px;
+ border-radius:12px;
+ margin:15px 0;
+ border-left:4px solid #2b4cff;
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px;}
+.grid img{width:100%;border-radius:12px;height:180px;object-fit:cover;}
+input,select,textarea{width:100%;padding:10px;border-radius:8px;border:none;margin-top:6px;}
+.social a{color:#2b4cff;margin:0 10px;text-decoration:none;font-weight:bold;}
+footer{text-align:center;padding:20px;background:#0f1a33;margin-top:30px;}
+.badge{background:#2b4cff;padding:5px 12px;border-radius:25px;font-size:12px;}
+</style>
+</head>
+<body>
+
+<header>
+ <h2>Amit <span>WebX</span> | Desi Gym</h2>
+ <nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#trainer">Trainers</a>
+  <a href="#class">Classes</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<section class="hero">
+ <h1>Desi Gym – Transform Your Body</h1>
+ <p>Professional Gym Website Demo – Men & Women Fitness</p>
+ <button onclick="document.getElementById('contact').scrollIntoView()">Book Free Consultation</button>
+</section>
+
+<div class="section" id="about">
+ <h2>About Gym</h2>
+ <div class="box">Desi Gym provides premium Men & Women Fitness programs with modern machines, certified trainers, and hygienic environment.</div>
+</div>
+
+<div class="section" id="services">
+ <h2>Services</h2>
+ <div class="grid">
+  <div class="box">Men Fitness Training</div>
+  <div class="box">Women Fitness Zone</div>
+  <div class="box">Weight Loss Program</div>
+  <div class="box">Muscle Gain Program</div>
+  <div class="box">Diet & Nutrition Guidance</div>
+  <div class="box">Cross-Fit Training</div>
+ </div>
+</div>
+
+<div class="section" id="pricing">
+ <h2>Membership Pricing</h2>
+ <div class="grid">
+  <div class="box"><span class="badge">Basic</span><br>₹999 / month</div>
+  <div class="box"><span class="badge">Pro</span><br>₹1999 / month</div>
+  <div class="box"><span class="badge">Premium</span><br>₹2999 / month</div>
+ </div>
+</div>
+
+<div class="section" id="gallery">
+ <h2>Gym Gallery</h2>
+ <div class="grid">
+  <img src="https://images.unsplash.com/photo-1556817411-31ae72fa3ea0" alt="Gym Hall">
+  <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a" alt="Gym Machines">
+  <img src="https://images.unsplash.com/photo-1517963879433-6ad5028f9f57" alt="Training">
+  <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Workout">
+ </div>
+</div>
+
+<div class="section" id="trainer">
+ <h2>Certified Trainers</h2>
+ <div class="grid">
+  <div class="box">Rahul Singh – Strength Coach</div>
+  <div class="box">Priya Sharma – Fat Loss Expert</div>
+  <div class="box">Amit Verma – CrossFit Trainer</div>
+ </div>
+</div>
+
+<div class="section" id="class">
+ <h2>Classes Schedule</h2>
+ <div class="grid">
+  <div class="box">Morning Batch: 6am – 9am</div>
+  <div class="box">Evening Batch: 4pm – 8pm</div>
+  <div class="box">Yoga & Zumba Classes</div>
+ </div>
+</div>
+
+<div class="section" id="reviews">
+ <h2>Client Reviews</h2>
+ <div class="box">⭐⭐⭐⭐⭐ Excellent Service & Result</div>
+ <div class="box">⭐⭐⭐⭐⭐ Highly Professional Trainers</div>
+</div>
+
+<div class="section" id="contact">
+ <h2>Book Appointment</h2>
+ <form onsubmit="sendWhatsApp();return false;">
+  <input id="name" placeholder="Full Name" required>
+  <input id="phone" placeholder="Phone Number" required>
+  <select id="plan">
+   <option>Basic</option>
+   <option>Pro</option>
+   <option>Premium</option>
+  </select>
+  <textarea id="msg" placeholder="Message / Goal"></textarea>
+  <button type="submit">Submit & WhatsApp</button>
+ </form>
+
+ <div class="social">
+  <h3>Follow Us</h3>
+  <a href="https://instagram.com" target="_blank">Instagram</a>
+  <a href="https://youtube.com" target="_blank">YouTube</a>
+  <a href="https://facebook.com" target="_blank">Facebook</a>
+ </div>
+</div>
+
+<footer>
+ © Amit WebX | Desi Gym – Professional Portfolio
+</footer>
+
+<script>
+function sendWhatsApp(){
+ let n=document.getElementById('name').value;
+ let p=document.getElementById('phone').value;
+ let plan=document.getElementById('plan').value;
+ let m=document.getElementById('msg').value;
+ let text=`Gym Enquiry:%0AName:${n}%0APhone:${p}%0APlan:${plan}%0AMessage:${m}`;
+ window.open(`https://wa.me/919241930459?text=${text}`);
+}
+</script>
+
+</body>
+</html>

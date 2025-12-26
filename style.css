@@ -1,0 +1,62 @@
+#connect{
+  text-align:center;
+  margin-top:40px;
+}
+
+.social-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-top:20px;
+}
+
+.social-buttons .btn{
+  padding:12px 25px;
+  border-radius:10px;
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+  transition:.3s;
+}
+
+.social-buttons .btn:hover{
+  transform:translateY(-3px);
+}
+
+/* Colors */
+.whatsapp{background:#25D366;}
+.instagram{background:#E1306C;}
+.youtube{background:#FF0000;}
+.facebook{background:#1877F2;}
+
+
+.bottom-nav{
+ position:fixed;
+ bottom:0;
+ left:0;
+ width:100%;
+ background:#ffffff;
+ display:flex;
+ justify-content:space-around;
+ border-top:1px solid #d1d5db;
+ padding:8px 0;
+ z-index:1001;
+}
+
+.bottom-nav a{
+ text-align:center;
+ font-size:13px;
+ color:#0f172a;
+ font-weight:600;
+}
+
+.bottom-nav span{
+ display:block;
+ font-size:12px;
+ margin-top:3px;
+}
+.portfolio-card{
+  display:block;
+}

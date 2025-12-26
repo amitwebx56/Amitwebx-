@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grammarpur Gawon Coaching</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f6ff;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: #264de4;
+    color: white;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    justify-content: center;
+}
+header img {
+    height: 55px;
+    width: 55px;
+    border-radius: 8px;
+}
+
+/* Hero Banner */
+.hero {
+    background: linear-gradient(#264de4b3, #000000a1), url('https://i.ibb.co/LSLN3dc/school.jpg');
+    background-size: cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 18px;
+}
+
+.btn {
+    background: #264de4;
+    padding: 12px 20px;
+    margin-top: 15px;
+    color: white;
+    display: inline-block;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #1f3fb3;
+}
+
+/* Section Title */
+.section-title {
+    margin: 25px 15px 10px;
+    font-size: 22px;
+    color: #264de4;
+    font-weight: bold;
+}
+
+/* Grid Buttons */
+.nav-grid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.feature-box {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+/* Content Cards */
+.card {
+    background: white;
+    margin: 20px;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Sections */
+.section {
+    background: white;
+    padding: 18px;
+    margin: 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.section h2 {
+    color: #183fcc;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+/* Footer */
+footer {
+    background: #264de4;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="https://i.ibb.co/99987qkS/Screenshot-20251128-174700-You-Tube.png">
+    Grammarpur Gawon Coaching
+</header>
+
+<div class="hero">
+    <h1>Modern Coaching for Rural Students</h1>
+    <p>Top Teachers | Smart Classes | Notes | Test Series</p>
+    <a href="#features" class="btn">Explore Features</a>
+</div>
+
+
+<!-- Main Features -->
+<div id="features" class="section-title">Main Features</div>
+
+<div class="nav-grid">
+    <div class="feature-box" onclick="location.href='#live'">Live Classes</div>
+    <div class="feature-box" onclick="location.href='#books'">Books</div>
+
+    <div class="feature-box" onclick="location.href='#notes'">Notes</div>
+    <div class="feature-box" onclick="location.href='#timetable'">Time Table</div>
+
+    <div class="feature-box" onclick="location.href='#admission'">Admission Form</div>
+    <div class="feature-box" onclick="location.href='#contact'">Contact Form</div>
+</div>
+
+
+<!-- Courses -->
+<div class="section-title">Our Popular Courses</div>
+<div class="card">
+    <p>• Class 6 to 10 All Subjects</p>
+    <p>• Class 11-12 Science</p>
+    <p>• Hindi Medium Special Preparation</p>
+</div>
+
+<!-- Teachers -->
+<div class="section-title">Top Faculty</div>
+<div class="card">
+    <p>• Anand Sir: Science Expert</p>
+    <p>• Priya Mam: English Specialist</p>
+    <p>• Rajesh Sir: Maths Guru</p>
+</div>
+
+
+<!-- Live Classes -->
+<div class="section" id="live">
+<h2>Live Classes</h2>
+<p>Daily YouTube + Zoom Classes.  
+Attendance System + PDF Upload + Doubt Session.</p>
+</div>
+
+
+<!-- Books -->
+<div class="section" id="books">
+<h2>Books</h2>
+<p>NCERT, Guide, Previous Year Papers, Test Series PDFs.</p>
+</div>
+
+
+<!-- Notes -->
+<div class="section" id="notes">
+<h2>Notes</h2>
+<p>Class-wise Notes with Diagrams, Examples and Model Answers.</p>
+</div>
+
+
+<!-- Time Table -->
+<div class="section" id="timetable">
+<h2>Time Table</h2>
+<p>Morning Batch: 6 AM to 10 AM  
+Evening Batch: 4 PM to 8 PM</p>
+</div>
+
+
+<!-- Admission Form -->
+<div class="section" id="admission">
+<h2>Admission Form</h2>
+
+<form>
+    <input type="text" placeholder="Student Name" required>
+    <input type="text" placeholder="Father Name">
+    <input type="number" placeholder="Mobile Number" required>
+    <input type="text" placeholder="Class">
+    <textarea placeholder="Address"></textarea>
+
+    <button class="btn">Submit</button>
+</form>
+</div>
+
+
+<!-- Contact Form -->
+<div class="section" id="contact">
+<h2>Contact Form</h2>
+
+<form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button class="btn">Send</button>
+</form>
+
+</div>
+
+<footer>© 2025 Grammarpur Gawon Coaching. All Rights Reserved.</footer>
+
+</body>
+</html>

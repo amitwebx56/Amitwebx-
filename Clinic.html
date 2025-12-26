@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>City Care Multispeciality Clinic</title>
+
+<meta name="description" content="City Care Clinic offers expert doctors, modern facilities, online appointment booking, emergency support, diagnostics and quality medical care for all age groups.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+/* GLOBAL */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f3f7ff;color:#1c1c1c}
+
+/* COLOR PALETTE
+Blue #0d3b66
+Teal #1a8f8f
+Yellow #ffd166
+Pink #ff6f91
+*/
+
+/* NAVBAR */
+nav{
+position:fixed;top:0;left:0;width:100%;
+background:#0d3b66;color:#fff;display:flex;
+justify-content:space-between;align-items:center;
+padding:16px 8%;z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,.2)
+}
+nav h2{font-size:26px}
+nav ul{display:flex;gap:25px}
+nav li{list-style:none}
+nav a{color:#ffd166}
+nav a:hover{color:#fff}
+
+/* HERO */
+.hero{
+margin-top:85px;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1580281657521-43a8a89c7a9d')
+center/cover no-repeat;
+padding:120px 8%;color:#fff;text-align:center
+}
+.hero h1{font-size:42px}
+.hero p{opacity:.9;margin-top:5px}
+
+.ribbon{
+background:#ff6f91;color:#fff;
+display:inline-block;padding:8px 18px;
+border-radius:30px;margin-top:15px
+}
+
+.btn{
+display:inline-block;background:#ffd166;
+padding:12px 25px;border-radius:30px;
+margin-top:15px;color:#000;font-weight:600
+}
+.btn:hover{background:#ffb703}
+
+/* CARDS */
+.section{padding:70px 8%}
+.section h2{text-align:center;margin-bottom:35px;font-size:30px}
+.card{
+background:#fff;border-radius:18px;
+padding:25px;box-shadow:0 10px 25px rgba(0,0,0,.1)
+}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:25px}
+
+/* BADGES */
+.badge{color:#1a8f8f;font-weight:600}
+
+/* DOCTORS */
+.doc img{width:100%;border-radius:12px;margin-bottom:10px}
+
+/* HOURS */
+.hours li{margin:6px 0}
+
+/* FORM */
+input,textarea{
+width:100%;padding:12px;border-radius:10px;
+border:1px solid #ccc;margin:6px 0
+}
+
+/* MAP */
+iframe{width:100%;border-radius:15px}
+
+/* FOOTER */
+footer{background:#0d3b66;color:#fff;text-align:center;padding:25px;margin-top:30px}
+.social i{margin:0 12px;font-size:20px}
+
+/* FLOATING WHATSAPP */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25d366;color:#fff;border-radius:50%;
+padding:16px;font-size:22px
+}
+
+/* RESPONSIVE */
+@media(max-width:850px){
+nav ul{display:none}
+.hero h1{font-size:28px}
+}
+
+</style>
+
+<script>
+function booked(){
+alert("Thank you. Your appointment request has been submitted.\nOur team will contact you shortly.");
+}
+</script>
+
+</head>
+
+<body>
+
+<nav>
+<h2>City Care Clinic</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#doctors">Doctors</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#book">Appointment</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+
+<section class="hero">
+<span class="ribbon">Trusted Healthcare Partner Since 2010</span>
+<h1>Complete Family Healthcare Under One Roof</h1>
+<p>Expert Doctors • Modern Facilities • Patient-First Care</p>
+<a href="#book" class="btn">Book Appointment</a>
+</section>
+
+
+<section class="section" id="about">
+<h2>About The Clinic</h2>
+
+<div class="grid">
+<div class="card">
+<p>
+City Care Multispeciality Clinic एक आधुनिक स्वास्थ्य केंद्र है  
+जहां सभी मरीजों को professional & friendly care दी जाती है।
+</p><br>
+
+<p>✔ Experienced Doctors</p>
+<p>✔ Advanced Diagnostic Lab</p>
+<p>✔ Emergency Support</p>
+<p>✔ Affordable Treatment</p>
+
+<br>
+<b>Consultation starting ₹300 only</b>
+</div>
+
+<div class="card">
+<h3>Opening Hours</h3>
+<ul class="hours">
+<li>Mon–Fri : 9:00 AM — 9:00 PM</li>
+<li>Saturday : 9:00 AM — 6:00 PM</li>
+<li>Sunday : On Appointment</li>
+</ul>
+
+<br>
+<h3>Insurance Accepted</h3>
+<p>Star Health · Aditya Birla · ICICI Lombard</p>
+</div>
+</div>
+</section>
+
+
+<section class="section" id="doctors">
+<h2>Our Doctors</h2>
+
+<div class="grid">
+
+<div class="card doc">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+<h3>Dr. Rakesh Mehta</h3>
+<p class="badge">General Physician — 18 yrs</p>
+</div>
+
+<div class="card doc">
+<img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12">
+<h3>Dr. Neha Agrawal</h3>
+<p class="badge">Dental Specialist — 10 yrs</p>
+</div>
+
+<div class="card doc">
+<img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7">
+<h3>Dr. Aryan Verma</h3>
+<p class="badge">Child Specialist — 8 yrs</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="services">
+<h2>Departments & Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>General Medicine</h3>
+<p>Fever · Infection · Diabetes · BP Care</p>
+</div>
+
+<div class="card">
+<h3>Dental Care</h3>
+<p>Root Canal · Braces · Cosmetic Dentistry</p>
+</div>
+
+<div class="card">
+<h3>Pediatrics</h3>
+<p>Vaccination · Newborn Care · Nutrition</p>
+</div>
+
+<div class="card">
+<h3>Diagnostics</h3>
+<p>Blood Tests · ECG · X-Ray</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="book">
+<h2>Book Appointment</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Why Patients Trust Us</h3>
+<p>⭐ Rated 4.9/5 by 1200+ Patients</p>
+<p>Clean & Hygienic Clinic</p>
+<p>Low Waiting Time</p>
+<p>Caring Staff</p>
+</div>
+
+<div class="card">
+<form onsubmit="booked();return false;">
+<input placeholder="Full Name" required>
+<input placeholder="Phone Number" required>
+<input type="date" required>
+<textarea rows="4" placeholder="Your Health Concern"></textarea>
+<button class="btn" style="width:100%">Confirm Appointment</button>
+</form>
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="contact">
+<h2>Contact & Location</h2>
+
+<div class="grid">
+
+<div class="card">
+<p><b>Address:</b> Main Road, Near City Mall</p>
+<p><b>Phone:</b> +91 9876543210</p>
+<p><b>Email:</b> clinic@mail.com</p>
+<br>
+<div class="social">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-youtube"></i>
+</div>
+</div>
+
+<div class="card">
+<iframe height="220" src="https://maps.google.com/maps?q=India&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+
+</div>
+</section>
+
+
+<footer>
+<p>Designed for Demo Portfolio | Amit WebX</p>
+<p>Professional Web Developer & Social Media Manager</p>
+</footer>
+
+<a class="whatsapp" href="#">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amit WebX – Online Shop Demo</title>
+
+<!-- SEO -->
+<meta name="description" content="Professional Online Shop Demo by Amit WebX. Fully responsive, modern UI with product catalog, reviews and WhatsApp ordering system.">
+
+<style>
+body{
+ margin:0;
+ font-family:Arial, Helvetica, sans-serif;
+ background:#0b1220;
+ color:white;
+}
+header{
+ background:#0f1a33;
+ padding:15px 40px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ position:sticky;
+ top:0;
+ border-bottom:2px solid #2b4cff;
+ z-index:10;
+}
+header h2 span{color:#2b4cff;}
+nav a{color:white;text-decoration:none;margin:10px;font-weight:bold;font-size:14px;}
+.hero{
+ background:url('https://images.unsplash.com/photo-1542838132-92c53300491e') center/cover no-repeat;
+ padding:110px 20px;
+ text-align:center;
+}
+.hero h1{color:#2b4cff;font-size:40px;margin-bottom:10px;}
+.section{
+ max-width:1150px;
+ margin:auto;
+ padding:45px 20px;
+ border-radius:14px;
+ background:#101c38;
+ margin-top:25px;
+ box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+ gap:15px;
+}
+.card{
+ background:#0f1a33;
+ padding:15px;
+ border-radius:12px;
+ border-left:4px solid #2b4cff;
+}
+.card img{
+ width:100%;
+ height:180px;
+ object-fit:cover;
+ border-radius:10px;
+}
+.price{color:#2b4cff;font-size:18px;font-weight:bold;}
+button{
+ background:#2b4cff;
+ border:none;
+ padding:9px 18px;
+ border-radius:25px;
+ color:white;
+ cursor:pointer;
+}
+.social a{color:#2b4cff;margin:10px;text-decoration:none;}
+input,textarea{
+ width:100%;
+ padding:10px;
+ border-radius:7px;
+ border:none;
+ margin-top:6px;
+}
+footer{text-align:center;background:#0f1a33;padding:20px;margin-top:30px;}
+</style>
+</head>
+<body>
+
+<header>
+ <h2>Amit <span>WebX</span> | Online Shop</h2>
+ <nav>
+  <a href="#shop">Shop</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Order</a>
+ </nav>
+</header>
+
+<section class="hero">
+ <h1>Modern Online Store</h1>
+ <p>Fast • Secure • Beautiful • Business-Focused</p>
+ <button onclick="document.getElementById('shop').scrollIntoView()">Explore Products</button>
+</section>
+
+<div class="section" id="shop">
+ <h2>Best Selling Products</h2>
+
+ <div class="grid">
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+   <h3>Smart Fitness Watch</h3>
+   <p class="price">₹2,999</p>
+   <button onclick="order('Smart Fitness Watch – ₹2,999')">Order Now</button>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1606813902914-9a9a3c6131be">
+   <h3>Bluetooth Earbuds</h3>
+   <p class="price">₹1,499</p>
+   <button onclick="order('Bluetooth Earbuds – ₹1,499')">Order Now</button>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1558203728-00f45181dd84">
+   <h3>Wireless Headphones</h3>
+   <p class="price">₹2,199</p>
+   <button onclick="order('Wireless Headphones – ₹2,199')">Order Now</button>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1503602642458-232111445657">
+   <h3>Running Shoes</h3>
+   <p class="price">₹1,999</p>
+   <button onclick="order('Running Shoes – ₹1,999')">Order Now</button>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1596075780750-81249df16d1d">
+   <h3>Casual Backpack</h3>
+   <p class="price">₹1,299</p>
+   <button onclick="order('Casual Backpack – ₹1,299')">Order Now</button>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+   <h3>Polarized Sunglasses</h3>
+   <p class="price">₹899</p>
+   <button onclick="order('Polarized Sunglasses – ₹899')">Order Now</button>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796">
+   <h3>Classic Leather Wallet</h3>
+   <p class="price">₹799</p>
+   <button onclick="order('Classic Leather Wallet – ₹799')">Order Now</button>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1618354691373-b1e5d3bd87e5">
+   <h3>Ladies Handbag</h3>
+   <p class="price">₹1,599</p>
+   <button onclick="order('Ladies Handbag – ₹1,599')">Order Now</button>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1620799139834-6b1170a2bd0c">
+   <h3>Wireless Keyboard</h3>
+   <p class="price">₹999</p>
+   <button onclick="order('Wireless Keyboard – ₹999')">Order Now</button>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1602526218892-83e4c9fd37e8">
+   <h3>LED Table Lamp</h3>
+   <p class="price">₹699</p>
+   <button onclick="order('LED Table Lamp – ₹699')">Order Now</button>
+  </div>
+
+ </div>
+</div>
+
+<div class="section" id="reviews">
+ <h2>Customer Reviews</h2>
+ <div class="card">⭐⭐⭐⭐⭐ Best Online Store experience</div>
+ <div class="card">⭐⭐⭐⭐⭐ Fast delivery and support</div>
+ <div class="card">⭐⭐⭐⭐⭐ Good quality products</div>
+</div>
+
+<div class="section" id="contact">
+ <h2>Order via WhatsApp</h2>
+
+ <form onsubmit="sendWA();return false;">
+  <input id="name" placeholder="Your Name" required>
+  <input id="phone" placeholder="Phone Number" required>
+  <textarea id="msg" placeholder="Product Name" required></textarea>
+  <button type="submit">Send Order</button>
+ </form>
+
+ <div class="social">
+  <h3>Follow Us</h3>
+  <a target="_blank" href="https://instagram.com">Instagram</a>
+  <a target="_blank" href="https://facebook.com">Facebook</a>
+  <a target="_blank" href="https://youtube.com">YouTube</a>
+ </div>
+</div>
+
+<footer>
+Designed by Amit WebX – Web Developer & Social Media Manager
+</footer>
+
+<script>
+function order(product){
+ document.getElementById('msg').value = product;
+ document.getElementById('contact').scrollIntoView();
+}
+
+function sendWA(){
+ let n=document.getElementById('name').value;
+ let p=document.getElementById('phone').value;
+ let m=document.getElementById('msg').value;
+
+ let text = `Online Order:%0AName: ${n}%0APhone: ${p}%0AProduct: ${m}`;
+ window.open(`https://wa.me/919241930459?text=${text}`);
+}
+</script>
+
+</body>
+</html>

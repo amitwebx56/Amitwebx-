@@ -1,0 +1,335 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Amit WebX | Grow Your Business Online</title>  
+<meta name="description" content="Professional Web Development & Social Media Management by Amit WebX. Build websites, grow your business online.">  
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">  
+<link rel="stylesheet" href="style.css">
+<style>  
+
+  
+/* Reset & general */  
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}  
+body{background:#f0f4f8;color:#111827;scroll-behavior:smooth;line-height:1.6;}  
+a{text-decoration:none;color:inherit;}  
+header{position:sticky;top:0;background:rgba(15,23,42,0.95);color:#fff;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:10px 50px;backdrop-filter:blur(5px);}  
+header .logo img{height:70px;}  
+.h1{
+  background-color: #1E90FF);
+  color: pink;
+}
+header nav ul{display:flex;list-style:none;}  
+header nav ul li{margin:0 15px;}  
+header nav ul li a{color:#fff;font-weight:600;transition:.3s;}  
+header nav ul li a:hover{color:#2563eb;}  
+  
+/* Hero */  
+.hero{background:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?fit=crop&w=1950&q=80') center/cover no-repeat;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;position:relative;}  
+.hero::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);}  
+.hero-content{position:relative;z-index:1;}  
+.hero h1{font-size:50px;margin-bottom:15px;text-shadow:2px 2px 10px rgba(0,0,0,.5);}  
+.hero p{font-size:22px;margin-bottom:30px;text-shadow:2px 2px 10px rgba(0,0,0,.5);}  
+.btn-primary,.btn-outline{padding:12px 25px;border-radius:8px;font-weight:600;margin:5px;transition:.3s;display:inline-block;}  
+.btn-primary{background:linear-gradient(90deg,#2563eb,#3b82f6);color:#fff;}  
+.btn-primary:hover{background:linear-gradient(90deg,#1e40af,#2563eb);}  
+.btn-outline{border:2px solid #2563eb;color:#2563eb;}  
+.btn-outline:hover{background:#2563eb;color:#fff;}  
+  
+/* Sections */  
+section{padding:80px 20px;max-width:1200px;margin:0 auto;position:relative;}  
+h2{text-align:center;margin-bottom:40px;font-size:32px;color:#0f172a;}  
+  
+/* About */  
+.about{display:flex;flex-wrap:wrap;align-items:center;gap:50px;background:linear-gradient(120deg,#e0f7fa,#e0f2fe);border-radius:15px;padding:50px;}  
+.about img{width:300px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.1);}  
+.about-text{flex:1;}  
+.about-text p{font-size:18px;margin-top:15px;}  
+  
+/* Services / Packages */  
+.services{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}  
+.service-card{background:#fff;padding:25px 20px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.15);width:300px;transition:.3s;}  
+.service-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,.25);}  
+.service-card h3{margin-bottom:10px;color:#2563eb;}  
+.service-card ul{margin-top:10px;list-style:disc;padding-left:20px;}  
+.service-card p.price{margin-top:15px;font-weight:700;color:#111827;font-size:18px;}  
+  
+/* Portfolio */  
+.portfolio{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}  
+.portfolio-card{background:#fff;padding:15px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.15);width:250px;transition:.3s;}  
+.portfolio-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,.25);}  
+.portfolio-card img{width:100%;border-radius:12px;}  
+.portfolio-card h4{margin:10px 0 5px;}  
+.portfolio-card p{font-size:14px;color:#555;}  
+  
+/* Testimonials */  
+.testimonials{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}  
+.testimonial-card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.15);width:300px;transition:.3s;}  
+.testimonial-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,.25);}  
+.testimonial-card p{font-size:16px;margin:10px 0;}  
+.testimonial-card span{font-weight:600;color:#2563eb;}  
+  
+/* Counters */  
+.counters{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;text-align:center;}  
+.counter{background:linear-gradient(135deg,#3b82f6,#2563eb);padding:25px 30px;border-radius:15px;color:#fff;width:200px;box-shadow:0 10px 30px rgba(0,0,0,.15);}  
+.counter h3{font-size:32px;}  
+.counter p{margin-top:10px;font-weight:600;}  
+  
+/* FAQ */  
+.faq-item{background:#fff;padding:20px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.15);margin-bottom:15px;}  
+.faq-item h4{cursor:pointer;color:#2563eb;}  
+.faq-item p{display:none;margin-top:10px;color:#111827;line-height:1.5;}  
+  
+/* Contact */  
+.contact-form{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:15px;}  
+.contact-form input,.contact-form textarea{padding:12px;border-radius:8px;border:1px solid #ccc;font-size:16px;width:100%;}  
+.contact-form button{padding:12px 20px;background:linear-gradient(90deg,#2563eb,#3b82f6);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:.3s;}  
+.contact-form button:hover{background:linear-gradient(90deg,#1e40af,#2563eb);}  
+  
+/* Footer */  
+footer{background:#0f172a;color:#fff;padding:25px;text-align:center;}  
+footer a{color:#fff;margin:0 8px;font-weight:600;transition:.3s;}  
+footer a:hover{color:#2563eb;}  
+  
+/* Responsive */  
+@media(max-width:768px){.about{flex-direction:column;}.counters,.services,.portfolio,.testimonials{flex-direction:column;align-items:center;}}  
+.bottom-nav{  
+ position:fixed;  
+ bottom:0;  
+ width:100%;  
+ background:white;  
+ display:flex;  
+ justify-content:space-around;  
+ padding:8px 0;  
+ border-top:1px solid #ddd;  
+}  
+  
+  
+</style>  
+</head>  
+<body>  
+  
+<!-- Background Music -->  
+
+<audio id="bg-music" >
+  <source src="Music.mp3" type="audio/mpeg">
+</audio>
+  
+<!-- Header -->  
+<header>  
+  <div class="logo"><img src="https://i.ibb.co/CsS6vgxK/1000092756-removebg-preview.png" alt="Amit WebX Logo"></div>  
+ <h1>Amit WebX</h1>
+</header>  
+  
+<!-- Hero -->  
+
+
+<section class="hero" id="hero">  
+  <div class="hero-content">  
+    <h1>Amit WebX</h1>  
+    <p>Grow Your Business Online | Web Developer & Social Media Manager</p>  
+    <a href="#contact" class="btn-primary">Contact on WhatsApp</a>  
+    <a href="#services" class="btn-outline">View Services</a>  
+  </div>  
+</section>  
+  
+<!-- About -->  
+<section class="about" id="about">  
+  <img src="https://via.placeholder.com/300" alt="Profile Image">  
+  <div class="about-text">  
+    <h2>About Me</h2>  
+    <p>Hi! I am Amit WebX, a professional Web Developer & Social Media Manager. I help businesses grow online with modern websites, e-commerce solutions, and effective social media strategies. My focus is on professional, result-oriented, and business-focused design.</p>  
+  </div>  
+</section>  
+  
+<!-- Services & Packages -->  
+<section id="services">  
+  <h2>Services & Packages</h2>  
+  <div class="services">  
+    <div class="service-card">  
+      <h3>Starter Website</h3>  
+      <ul>  
+        <li>5 Pages</li>  
+        <li>Mobile Friendly</li>  
+        <li>Contact Form</li>  
+        <li>Basic SEO</li>  
+        <li>Fast Loading</li>  
+      </ul>  
+      <p class="price">₹12,000 – ₹18,000</p>  
+    </div>  
+    <div class="service-card">  
+      <h3>Business Website</h3>  
+      <ul>  
+        <li>10–12 Pages</li>  
+        <li>WordPress CMS</li>  
+        <li>Gallery + Slider</li>  
+        <li>Basic SEO</li>  
+        <li>Professional Design</li>  
+      </ul>  
+      <p class="price">₹25,000 – ₹40,000</p>  
+    </div>  
+    <div class="service-card">  
+      <h3>E-Commerce Website</h3>  
+      <ul>  
+        <li>Online Store</li>  
+        <li>Products + Cart</li>  
+        <li>Payment Gateway</li>  
+        <li>Admin Panel</li>  
+      </ul>  
+      <p class="price">₹50,000 – ₹90,000</p>  
+    </div>  
+    <div class="service-card">  
+      <h3>Social Media Basic Plan</h3>  
+      <ul>  
+        <li>8 Posts / Month</li>  
+        <li>Captions & Hashtags</li>  
+      </ul>  
+      <p class="price">₹2,000 – ₹4,000</p>  
+    </div>  
+    <div class="service-card">  
+      <h3>Growth Plan</h3>  
+      <ul>  
+        <li>15 Posts / Month</li>  
+        <li>Strategy + Analytics</li>  
+      </ul>  
+      <p class="price">₹5,000 – ₹8,000</p>  
+    </div>  
+    <div class="service-card">  
+      <h3>Premium Plan</h3>  
+      <ul>  
+        <li>25 Posts / Month</li>  
+        <li>Reels Support</li>  
+        <li>Full Account Handling</li>  
+      </ul>  
+      <p class="price">₹10,000+</p>  
+    </div>  
+  </div>  
+</section>  
+  
+<!-- Portfolio -->  
+<section id="portfolio">
+  <h2>Portfolio</h2>
+
+  <div class="portfolio">
+
+    <a class="portfolio-card" href="coaching.html" target="_blank">
+      
+      <h4>Coaching Website</h4>
+      <p>Demo project for coaching institute</p>
+    </a>
+
+    <a class="portfolio-card" href="Gym.html" target="_blank">
+      
+      <h4>Gym Website</h4>
+      <p>Demo project for gym</p>
+    </a>
+
+    <a class="portfolio-card" href="Clinic.html" target="_blank">
+      
+      <h4>Clinic Website</h4>
+      <p>Demo project for clinic</p>
+    </a>
+
+    <a class="portfolio-card" href="Shop.html" target="_blank">
+      
+      <h4>Online Store Demo</h4>
+      <p>Demo e-commerce project</p>
+    </a>
+
+  </div>
+</section>
+  
+<!-- Testimonials, Counters, FAQ, Contact, Footer -->  
+<!-- Same as previous code, social links in footer -->  
+<!-- Social Buttons Section -->
+<section id="connect">
+  <h2>Connect With Me</h2>
+
+  <div class="social-buttons">
+
+    <a href="https://wa.me/919241930459" target="_blank" class="btn whatsapp">
+      💬 WhatsApp
+    </a>
+
+    <a href="https://www.instagram.com/amitwebx?igsh=NndreXh5bzU5ZWdt" target="_blank" class="btn instagram">
+      📸 Instagram
+    </a>
+
+    <a href="https://youtube.com/@amitwebxdev?si=0HLPtycfY8hNTh0k" target="_blank" class="btn youtube">
+      ▶ YouTube
+    </a>
+
+    <a href="https://facebook.com" target="_blank" class="btn facebook">
+      👍 Facebook
+    </a>
+
+  </div>
+</section>
+<footer>  
+
+
+  <p>Designed by Amit WebX – Web Developer & Social Media Manager</p>  
+
+  <h3>provid by digital group</h3>
+</footer>  
+  
+<script>  
+// FAQ toggle  
+document.querySelectorAll('.faq-item h4').forEach(item=>{  
+  item.addEventListener('click', ()=>{  
+    const para=item.nextElementSibling;  
+    para.style.display=(para.style.display==='block')?'none':'block';  
+  });  
+});  
+  
+// WhatsApp auto message  
+function sendWhatsAppMessage(){  
+  const name=document.getElementById('cname').value;  
+  const message=document.getElementById('cmsg').value;  
+  if(!name || !message){alert('Please fill name and message');return;}  
+  window.open('https://wa.me/919241930249?text=Hello,%20I%20am%20'+encodeURIComponent(name)+'%0A%0AQuery:%20'+encodeURIComponent(message));  
+}  
+  
+  
+</script>  
+  
+  <div class="bottom-nav">
+ <a href="#hero">
+   <span class="icon">🏠</span>
+   <span>Home</span>
+ </a>
+
+ <a href="#about">
+   <span class="icon">👨‍💻</span>
+   <span>About</span>
+ </a>
+
+ <a href="#portfolio">
+   <span class="icon">🖼️</span>
+   <span>Portfolio</span>
+ </a>
+
+ <a href="#connect">
+   <span class="icon">📞</span>
+   <span>Contact</span>
+ </a>
+</div> 
+
+</body>  
+<script>
+const music = document.getElementById("bg-music");
+const btn = document.getElementById("musicBtn");
+
+btn.addEventListener("click", function () {
+  music.play()
+    .then(() => {
+      btn.innerText = "Playing...";
+    })
+    .catch(err => {
+      alert("Music play failed: " + err);
+    });
+});
+</script>
+</html>  
+  
